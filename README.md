@@ -1,2 +1,2 @@
 # My Portfolio Website
-My website showcasing my projects
+My website showcasing my work
