@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -87,11 +87,13 @@
       transform: translate3d(0, 0, 0);
     }
 
-    .portrait {
-      width: 250px;
-      height: 250px;
+    #portrait {
+      width: 400px;
+      height: 400px;
       background: url(../img/Headshot.png);
-      background-position-x: -35px;
+      background-position-x: -65px;
+      background-repeat: no-repeat;
+      background-size: 130%;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -118,7 +120,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
