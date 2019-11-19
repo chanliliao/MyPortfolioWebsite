@@ -75,11 +75,11 @@
     .menu-branding.show {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-    .menu-branding #portrait {
-      width: 400px;
-      height: 400px;
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
       background: url(../img/Headshot.png);
-      background-position-x: -65px;
+      background-position-x: -40px;
       background-repeat: no-repeat;
       background-size: 130%;
       border-radius: 50%;
@@ -286,10 +286,14 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  h2.sm-heading {
+    width: 100%; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (max-width: 1170px) {
+  h2.sm-heading {
+    width: 100%; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
