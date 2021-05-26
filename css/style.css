@@ -265,10 +265,8 @@ button {
 }
 
 /* might need to change in media */
-.img-box > img {
-  height: 90%;
-  width: 90%;
-  margin: 20px;
+.about-img .img-box img {
+  width: 100%;
 }
 
 .about-text h3 {
@@ -357,6 +355,11 @@ button {
 
 .about-text .tab-content {
   padding: 40px 0;
+  display: none;
+}
+
+.about-text .tab-content.active {
+  display: block;
 }
 
 .about-text .timeline-item {
@@ -395,4 +398,8 @@ button {
 
 .about-text .timeline-item h4 span {
   font-weight: 400;
+}
+
+.about-text .btn {
+  margin: 15px 15px 15px 0;
 }
