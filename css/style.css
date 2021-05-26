@@ -1,4 +1,4 @@
-/* Variables */
+/*------------------------ Variables ---------------------------*/
 :root {
   --main-color: #e02f6b;
   --blue: #0000ff;
@@ -13,10 +13,10 @@
   --backdrop-filter-blur: blur(5px);
 }
 
-/* Fonts*/
+/*--------------------------- Fonts ----------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Global Settings */
+/*----------------------- Global Settings ----------------------*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -113,7 +113,7 @@ section {
   display: none !important;
 }
 
-/* Section Title */
+/*--------------------------- Section Title --------------------*/
 
 .sec-padding {
   padding: 80px 0;
@@ -131,7 +131,7 @@ section {
   text-transform: capitalize;
 }
 
-/* Custom Scrollbar */
+/*----------------------- Custom Scrollbar ---------------------*/
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -144,7 +144,7 @@ section {
   background-color: var(--main-color);
 }
 
-/* Buttons */
+/*--------------------------- Buttons --------------------------*/
 button {
   font-family: inherit;
   user-select: none;
@@ -189,7 +189,7 @@ button {
   color: var(--white);
 }
 
-/* Home Section */
+/*------------------------- Home Section -----------------------*/
 .home-section {
   display: flex;
   padding: 12px 0;
@@ -242,7 +242,7 @@ button {
   border-radius: 50%;
 }
 
-/* About Section */
+/*-------------------------- About Section ---------------------*/
 
 .about-img {
   /* background-color: red; */
@@ -402,4 +402,40 @@ button {
 
 .about-text .btn {
   margin: 15px 15px 15px 0;
+}
+
+/*---------------------------- Portfolio -----------------------*/
+.portfolio-section {
+  padding-bottom: 50px;
+}
+
+.portfolio-item {
+  width: calc((100% / 3) - 30px);
+  margin: 0 15px 30px;
+}
+
+.portfolio-item-thumbnail {
+  padding: 10px;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  border-radius: 10px;
+}
+
+.portfolio-item-thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.portfolio-item h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 20px;
+}
+
+.portfolio-item button {
+  border: none;
+}
+
+.portfolio-item-details {
+  display: none;
 }
