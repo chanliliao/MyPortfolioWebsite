@@ -1037,12 +1037,15 @@ button {
     width: 1500px;
     margin: auto;
   }
+  .about-text {
+    width: 70%;
+  }
   .about-text .timeline-item {
-    width: 80%;
-    margin: auto;
+    padding: 0 100px;
+    margin: 40px 100px;
   }
   .about-text .timeline::before {
-    left: 87px;
+    left: 105px;
   }
 }
 @media (max-width: 1570px) {
