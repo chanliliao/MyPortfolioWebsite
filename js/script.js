@@ -9,6 +9,51 @@ window.addEventListener('load', () => {
   }, 600);
 });
 
+// Dark mode toggle
+const darkModeToggler = document.querySelector('.dark-mode-toggle');
+darkModeToggler.addEventListener('click', () => {
+  toggleDarkMode();
+});
+
+function toggleDarkMode() {
+  document.querySelector('body').classList.toggle('dark-mode');
+  let sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    section.classList.toggle('dark-mode');
+  });
+  let btns = document.querySelectorAll('.btn');
+  btns.forEach((btn) => {
+    btn.classList.toggle('dark-mode');
+  });
+  document.querySelector('.header .nav-toggler').classList.toggle('dark-mode');
+  document.querySelector('.header .nav-inner').classList.toggle('dark-mode');
+  let skillItems = document.querySelectorAll('.about-text .skill-item');
+  skillItems.forEach((skillItem) => {
+    skillItem.classList.toggle('dark-mode');
+  });
+  let links = document.querySelectorAll('.header .nav-inner ul li a');
+  links.forEach((link) => {
+    link.classList.toggle('dark-mode');
+  });
+  // document.querySelector('.home-img .img-box').classList.toggle('dark-mode');
+  // document.querySelector('.about-img .img-box').classList.toggle('dark-mode');
+  let thumbnails = document.querySelectorAll('.portfolio-item-thumbnail');
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.toggle('dark-mode');
+  });
+  document.querySelector('.pp-content').classList.toggle('dark-mode');
+
+  let inputs = document.querySelectorAll('.contact-form .input-control');
+  inputs.forEach((input) => {
+    input.classList.toggle('dark-mode');
+  });
+
+  let slinks = document.querySelectorAll('.contact-info-item .social-links a');
+  slinks.forEach((slink) => {
+    slink.classList.toggle('dark-mode');
+  });
+}
+
 // NavBar Toggle
 const navToggler = document.querySelector('.nav-toggler');
 navToggler.addEventListener('click', () => {

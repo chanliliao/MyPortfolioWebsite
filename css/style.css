@@ -10,6 +10,8 @@
   --white: #ffffff;
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --white-alpha-20: rgba(255, 255, 255, 0.2);
+  --white-alpha-10: rgba(255, 255, 255, 0.1);
   --backdrop-filter-blur: blur(5px);
 }
 
@@ -48,6 +50,12 @@ body {
   padding: 35px 35px;
 }
 
+body.dark-mode {
+  background-color: black;
+  background-image: none;
+  color: rgba(255, 255, 255, 0.885);
+}
+
 body.hide-scrolling {
   overflow-y: hidden;
 }
@@ -59,7 +67,7 @@ body::before {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--green-yellow);
+  /* background-color: var(--green-yellow); */
   z-index: -1;
   opacity: 0.12;
 }
@@ -96,6 +104,11 @@ section {
   border-radius: 30px;
   backdrop-filter: var(--backdrop-filter-blur);
   display: none;
+}
+
+section.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-10);
 }
 
 section.active {
@@ -205,6 +218,10 @@ button {
   overflow: hidden;
   vertical-align: middle;
   transition: color 0.3s ease;
+}
+
+.btn.dark-mode {
+  background-color: var(--white-alpha-10);
 }
 
 /* hover effect */
@@ -427,6 +444,11 @@ button {
   transition: opacity 0.5s ease-in-out;
 }
 
+.header .nav-toggler.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
+}
+
 .header .nav-toggler.hide {
   opacity: 0;
   transition: none;
@@ -509,6 +531,11 @@ button {
   transition: all 0.5s ease;
 }
 
+.header .nav-inner.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
+}
+
 .header.active .nav-inner {
   opacity: 1;
 }
@@ -526,6 +553,10 @@ button {
   padding: 8px 15px;
   transition: color 0.3s ease;
   position: relative;
+}
+
+.header .nav-inner ul li a.dark-mode {
+  color: white;
 }
 
 .header .nav-inner ul li a:before {
@@ -590,9 +621,14 @@ button {
 .home-img .img-box {
   max-width: 360px;
   background-color: var(--white-alpha-25);
+  border: 8px solid var(--white-alpha-40);
   border-radius: 50%;
-  border: 8px solid var(--white-alpha-25);
   margin: auto;
+}
+
+.home-img .img-box.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 8px solid var(--white-alpha-20);
 }
 
 .home-img .img-box img {
@@ -622,6 +658,11 @@ button {
   border-radius: 10px;
 }
 
+.about-img .img-box.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 8px solid var(--white-alpha-20);
+}
+
 /* might need to change in media */
 .about-img .img-box img {
   width: 100%;
@@ -646,6 +687,11 @@ button {
   text-transform: capitalize;
   margin: 0 10px 10px 0;
   border-radius: 20px;
+}
+
+.about-text .skill-item.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
 }
 
 .about-tabs {
@@ -780,6 +826,11 @@ button {
   border-radius: 10px;
 }
 
+.portfolio-item-thumbnail.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
+}
+
 .portfolio-item-thumbnail img {
   width: 100%;
   border-radius: 10px;
@@ -829,6 +880,11 @@ button {
   backdrop-filter: var(--backdrop-filter-blur);
   opacity: 0;
   transform: scale(0.9);
+}
+
+.pp-content.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
 }
 
 .portfolio-popup.open .pp-content {
@@ -901,6 +957,10 @@ button {
   font-weight: 300;
 }
 
+.contact-form .input-control.dark-mode::placeholder {
+  color: var(--white);
+}
+
 .contact-form .input-control {
   display: block;
   width: 100%;
@@ -917,8 +977,16 @@ button {
   transition: border-color 0.3s ease;
 }
 
+.contact-form .input-control.dark-mode {
+  background-color: var(--white-alpha-10);
+}
+
 .contact-form .input-control:focus {
   border-color: var(--white-alpha-40);
+}
+
+.contact-form .input-control.dark-mode:focus {
+  border-color: var(--white-alpha-20);
 }
 
 .contact-form textarea.input-control {
@@ -950,6 +1018,11 @@ button {
   border-radius: 50%;
   margin: 6px 4px 0 0;
   transition: all 0.3s ease;
+}
+
+.contact-info-item .social-links a.dark-mode {
+  background-color: var(--white-alpha-10);
+  border: 1px solid var(--white-alpha-20);
 }
 
 .contact-info-item .social-links a:hover {
