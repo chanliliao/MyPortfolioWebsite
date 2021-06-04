@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Page Loader Start -->
@@ -527,21 +533,23 @@
           </div>
           <div class="row">
             <div class="contact-form">
-              <form>
+              <form action="https://formspree.io/f/xwkaoznb" method="POST">
                 <div class="row">
+                  <div class="status"></div>
                   <div class="input-group">
                     <input
                       type="text"
                       placeholder="Name"
-                      class="input-control"
+                      class="input-control name"
                       required
                     />
                   </div>
                   <div class="input-group">
                     <input
                       type="text"
+                      name="_replyto"
                       placeholder="Email"
-                      class="input-control"
+                      class="input-control email"
                       required
                     />
                   </div>
@@ -549,14 +557,15 @@
                     <input
                       type="text"
                       placeholder="Subject"
-                      class="input-control"
+                      class="input-control subject"
                       required
                     />
                   </div>
                   <div class="input-group">
                     <textarea
+                      name="message"
                       placeholder="Message"
-                      class="input-control"
+                      class="input-control message"
                       required
                     ></textarea>
                   </div>
@@ -614,7 +623,6 @@
       </div>
     </div>
     <!-- Portoflio Item Details Popup End -->
-
-    <script src="js/script.js"></script>
   </body>
+  <script src="js/script.js"></script>
 </html>
