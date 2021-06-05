@@ -714,6 +714,10 @@ button {
   transition: all 0.3s ease;
 }
 
+.about-tabs .tab-item.dark-mode {
+  color: var(--white);
+}
+
 .about-tabs .tab-item:last-child {
   margin: 0;
 }

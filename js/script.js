@@ -11,12 +11,23 @@ window.addEventListener('load', () => {
 
 // Dark mode toggle
 const darkModeToggler = document.querySelector('.dark-mode-toggle');
-darkModeToggler.addEventListener('click', () => {
-  toggleDarkMode();
+darkModeToggler.addEventListener('click', (e) => {
+  toggleDarkMode(e);
 });
 
-function toggleDarkMode() {
+function toggleDarkMode(e) {
+  if (e.target.classList.contains('d')) {
+    document.querySelector('.dark-mode-toggle').innerHTML = 'Light Mode';
+    e.target.classList.remove('d');
+  } else {
+    document.querySelector('.dark-mode-toggle').innerHTML = 'Dark Mode';
+    e.target.classList.add('d');
+  }
   document.querySelector('body').classList.toggle('dark-mode');
+  let items = document.querySelectorAll('.about-tabs .tab-item');
+  items.forEach((item) => {
+    item.classList.toggle('dark-mode');
+  });
   let sections = document.querySelectorAll('section');
   sections.forEach((section) => {
     section.classList.toggle('dark-mode');
@@ -152,38 +163,3 @@ function portfolioItemDetails(portfolioItem) {
     '.portfolio-item-details'
   ).innerHTML;
 }
-
-// Contact form
-$(document).ready(function () {
-  $('.submit-btn').click(function (e) {
-    console.log('click');
-
-    let name = $('.name').val();
-    let email = $('.email').val();
-    let subject = $('.subject').val();
-    let message = $('.message').val();
-    let statusElm = $('.status');
-    statusElm.empty();
-
-    if (email.length > 5 && email.includes('@') && email.includes('.')) {
-      statusElm.append('<div>Email is valid</div>');
-    } else {
-      e.preventDefault();
-      statusElm.append('<div>Email is not valid</div>');
-    }
-
-    if (subject.length > 0) {
-      statusElm.append('<div>Subject is valid</div>');
-    } else {
-      e.preventDefault();
-      statusElm.append('<div>Subject is not valid</div>');
-    }
-
-    if (message.length > 0) {
-      statusElm.append('<div>Message is valid</div>');
-    } else {
-      e.preventDefault();
-      statusElm.append('<div>Message is not valid</div>');
-    }
-  });
-});
